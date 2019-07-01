@@ -1,0 +1,16 @@
+2019-07-01 16:00:56,303:CRUD:Exception occurred during deletion
+Traceback (most recent call last):
+  File "/home/delhivery/PycharmProjects/Flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1979, in delete
+    state = attributes.instance_state(instance)
+AttributeError: 'NoneType' object has no attribute '_sa_instance_state'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/delhivery/PycharmProjects/Flask/CRUD/tasks.py", line 47, in deleteThroughCelery
+    db.session.delete(book)
+  File "/home/delhivery/PycharmProjects/Flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/delhivery/PycharmProjects/Flask/venv/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1981, in delete
+    raise exc.UnmappedInstanceError(instance)
+sqlalchemy.orm.exc.UnmappedInstanceError: Class 'builtins.NoneType' is not mapped

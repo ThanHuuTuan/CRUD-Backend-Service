@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Flask + Celery + Redis</title>
+  </head>
+  <body>
+    <h1>Search for Entry</h1>
+    <form action = "http://127.0.0.1:5000/getEntry" method="POST">
+      <p>Enter book id: <input type="text" name="id" value="{{ id }}"></p>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+    <h1>Book Entry</h1>
+    <form method="POST">
+      <p>Enter book name: <input type="text" name="name" value="{{ name }}"></p>
+      <p>Enter book author: <input type="text" name="author" value="{{author}}"></p>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+    <h1>Book Update</h1>
+    <form action = "http://127.0.0.1:5000/updateData" method="POST">
+      <p>Enter the id for which you want to update: <input type="text" name="id" value="{{ id }}"></p>
+      <p>Update name: <input type="text" name="name1" value="{{ name1 }}"></p>
+      <p>Update author: <input type="text" name="author1" value="{{ author1 }}"></p>
+
+      <input type="submit" name="submit1" value="Submit">
+    </form>
+    <h1>Delete Entry</h1>
+    <form action = "http://127.0.0.1:5000/deleteData" method="POST">
+      <p>Enter the id for which you want to delete: <input type="text" name="id" value="{{ id }}"></p>
+
+      <input type="submit" name="submit1" value="Submit">
+    </form>
+    <h1>Get all Entries</h1>
+    <form action = "http://127.0.0.1:5000/showResults" method="POST">
+      <input type="submit" name="submit1" value="Show Results">
+    </form>
+  </body>
+</html>

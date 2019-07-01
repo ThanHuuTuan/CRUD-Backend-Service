@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <h1>Task Result</h1>
+      <p>Job id: {{job}}</p>
+    <form action = "http://127.0.0.1:5000/taskResults" method="POST">
+      <p>Enter job id: <input type="text" name="id" value="{{ id }}"></p>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </body>
+</html>
